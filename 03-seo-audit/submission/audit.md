@@ -1,9 +1,9 @@
 # SEO Audit — https://atlas-coffee-tangier-host.wasmer.app/
 
-**Audited on:** 2026-05-17
-**Audited by:** Anouar Benyekhlef
-**Tools used:** PageSpeed Insights, Rank Math SEO, Google Search Console, Ahrefs Webmaster Tools, Chrome DevTools / View Page Source
-**Evidence:** Screenshots are included in the `./screenshots/` directory for PageSpeed mobile/desktop, Rank Math, Google Search Console sitemap submission, Chrome DevTools page source, and Ahrefs Webmaster Tools.
+**Audited on:** 2026-05-17 <br>
+**Audited by:** Anouar Benyekhlef <br>
+**Tools used:** PageSpeed Insights, Rank Math SEO, Google Search Console, Ahrefs Webmaster Tools, Chrome DevTools / View Page Source <br>
+**Evidence:** Screenshots are included in the `./screenshots/` directory for PageSpeed mobile/desktop, Rank Math, Google Search Console sitemap submission, Chrome DevTools page source, and Ahrefs Webmaster Tools. <br>
 
 ## 1. Page snapshot
 - URL: https://atlas-coffee-tangier-host.wasmer.app/
@@ -16,7 +16,9 @@ This is a short landing page for my specialty coffee shop, Atlas Coffee Tangier.
 
 ## 2. On-page SEO
 - Title tag — length, keyword placement, judgment: My current title tag is `Single-Origin Beans in Tangier | Atlas Coffee Tangier` (53 characters). This is well within the optimal 50-60 character limit. I placed the high-value focus keyword `Single-Origin Beans` right at the front, incorporated my targeted geographical location `Tangier` in the middle, and closed with my brand name `Atlas Coffee Tangier`. This placement is extremely effective for local search intent.
+
 - Meta description — length, hook, judgment: My meta description is: `Atlas Coffee Tangier - Specialty coffee in Tangier's medina. Single-origin beans from Ethiopia, Colombia, Yemen. Slow-roasted in small batches since 2019. Visit us near Bab el Fahs.` At exactly 148 characters, it fits perfectly below the 160-character truncation ceiling, ensuring my entire snippet displays in Google SERPs without being cut off (`...`). The description features an active local hook detailing three famous coffee origins, small-batch roasting, and a physical location reference, providing a high click-through rate (CTR) incentive.
+
 - H1 / H2 hierarchy — what is on the page, is it correct?: My page heading structure is perfectly optimized for search crawler indexing and accessibility:
   - **H1:** Specialty coffee, anchored in Tangier.
   - **H2:** Single-origin beans
@@ -24,11 +26,14 @@ This is a short landing page for my specialty coffee shop, Atlas Coffee Tangier.
   - **H2:** Brewed by hand
   - **H2:** Find us in the medina, just past Bab el Fahs.
   This clean, sequential heading hierarchy ensures a correct document outline and optimal on-page SEO depth.
+
 - Image alt text — present? meaningful?: Yes, all key images on my page contain meaningful, keyword-rich alternative text. The hero image features `alt="A hand-poured specialty coffee in a warm, sunlit cafe in the Tangier medina"`. This is highly descriptive, useful for visually impaired users, and naturally reinforces my local and specialty coffee keyword relevance.
+
 - Internal links — how many, where they go: Internal linking is currently limited due to my single-page structure. There are **2 internal anchor links** (the navbar anchors) that point internally:
   - `Visit our shop` and `Location` link to the `#directions` element.
   - `Our Coffee` links to `#features`.
   To improve my ranking depth, adding physical internal page links to future subpages (e.g. `/menu`, `/about`, `/contact`) will be required.
+  
 - Content quality — is the page actually about something useful?: Yes. My page is highly focused, serving as an informative, high-conversion landing page for Atlas Coffee. It answers the immediate search queries of coffee enthusiasts visiting Tangier by providing exact coffee origins (Ethiopia, Colombia, Yemen), roasting frequency and batch sizes (twice a week under 8 kg), brewing methods (pour-over, espresso, Moroccan-style filter), and exact location/business hours. It has zero fluff and is highly relevant to my brand's identity.
 
 ### Rank Math SEO Hardening & Score Boost
