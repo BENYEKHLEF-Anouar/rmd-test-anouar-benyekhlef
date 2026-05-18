@@ -11,8 +11,8 @@ A WordPress webhook triggered by the **WP Webhooks** plugin (or enqueued directl
 
 ## Steps (numbered)
 1.  **Webhook Trigger (WP Webhooks)**: Listens for a WordPress status transition trigger containing the post ID and metadata.
-2.  **De-duplication Node**: Queries our processed log database (e.g., Redis or Airtable) to check if this `post_id` was already processed, halting immediately if it is a duplicate.
-3.  **Filter Node**: Verifies that the post status is strictly set to `publish`, instantly halting the execution for drafts or revisions to prevent Slack spam.
+2.  **Filter Node**: Verifies that the post status is strictly set to `publish`, instantly halting the execution for drafts or revisions to prevent Slack spam.
+3.  **De-duplication Node**: Queries our processed log database (e.g., Redis or Airtable) to check if this `post_id` was already processed, halting immediately if it is a duplicate.
 4.  **HTTP Request Node**: Connects to the WordPress REST API dynamically (`/wp-json/wp/v2/posts/{{ $json.body.post_id }}?_embed=1`) to fetch the full post content and featured media attachment URL.
 5.  **HTML Parser Node**: Strips out all layout wrappers, Gutenberg block tags, and shortcodes from the raw HTML to extract clean body text.
 6.  **OpenAI Node (GPT-4o-mini)**: Sends the parsed body text to OpenAI's API to generate a concise, engaging two-sentence summary.
@@ -33,15 +33,15 @@ To prevent already-published posts from triggering duplicate Slack alerts when e
 ```mermaid
 graph TD
     A[WordPress Trigger: Status Transition Hook] -->|HTTP POST Payload| B(n8n Webhook Node)
-    B --> C{Log Check: Was ID Processed?}
-    
-    %% Log Check Branching
-    C -->|Yes| D[Halt Execution]
-    C -->|No| E{Filter: Is Status 'publish'?}
+    B --> C{Filter: Is Status 'publish'?}
     
     %% Filter Branching
-    E -->|No| F[Halt Execution]
-    E -->|Yes| G(HTTP Request: Fetch Content & Image URL)
+    C -->|No| D[Halt Execution]
+    C -->|Yes| E{Log Check: Was ID Processed?}
+    
+    %% Log Check Branching
+    E -->|Yes| F[Halt Execution]
+    E -->|No| G(HTTP Request: Fetch Content & Image URL)
     
     G --> H(HTML Parser: Strip Tags)
     H --> I{OpenAI Node: Generate Summary}
